@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400&display=swap');
+
+:root{
+  --main-backgroundColor1:#F2EEDD;
+  --main-backgroundColor2: #D8D4C3;
+  --main-fontColor: #322D1B;
+  --main-fontColor2: #393113;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Amatic SC', cursive;
+  overflow-x: hidden;
+}
+
+#content {
+  background-color: var(--main-backgroundColor1); 
+}
+
+header{
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: space-around;
+  background-color: var(--main-backgroundColor2);
+  align-items: center;
+  font-family: 'Amatic SC', cursive;
+  height: 4.5rem;
+  z-index: 2;
+}
+
+.header-menu{
+  margin: 5rem;
+}
+
+.main,
+.photos, 
+.menu,
+.information
+{
+  font-size: 1.5rem;
+  color: var(--main-fontColor);
+  padding: 0.5rem;
+}
+
+.photos:hover, 
+.menu:hover,
+.information:hover{
+  background-color: var(--main-backgroundColor1);
+  padding: 0.5rem;
+}
+
+#gallery{
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 0.1rem;
+  padding: 4rem 0;
+  position: relative;
+}
+
+img{
+  width: 100%;
+  height: 374px;
+  object-fit: cover;
+}
+
+img:nth-child(2),
+img:nth-child(3) {
+  object-position: bottom center;
+}
+
+.utensils{
+  color: white;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  font-size: 16px;
+  top:75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+}
+
+.utensils:hover{
+  background-color: var(--main-backgroundColor1);
+  border: 1px solid black;
+  color: var(--main-fontColor);
+  transition: all 0.2s ease;
+}
+
+#menu-header{
+  background-color: var(--main-backgroundColor2);
+  height: 8rem;
+}
+
+#main-section,
+#book-section,
+#info-section{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--main-fontColor2);
+  position: relative;
+}
+
+#book-section{
+  background: var(--main-backgroundColor2);
+}
+
+.menu-text{
+  top: 20%;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.menu-text::after {
+ content: '';
+ width: 100%;
+ height: 3px;
+ background: black;
+ display: block;
+ margin-top: 1rem;
+}
+
+.sub-menu{
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+.sub-menu span{
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.sub-menu:nth-of-type(5),
+.sub-menu:nth-of-type(10),
+.sub-menu:nth-of-type(15){
+  margin-bottom: 5%;
+}
+
+.sub-menu:nth-of-type(19){
+  margin-bottom: 20%;
+}
+
+.sub-menu a{
+  color: var(--main-fontColor2);
+}
+
+.sub-menu h1{
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 400;
+}
+
+.sub-menu h1:hover{
+  text-decoration: underline;
+}
+
+.sub-menu h1::before,
+.sub-menu h1::after {
+  content: '-';
+}
+
+.sub-menu div {
+  display: flex;
+  justify-content:space-between;
+}
+
+.book-sub-section,
+.contact-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.book-sub-section h1,p{
+  width: 50vw;
+  text-align: center;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.book-sub-section h1{
+  font-size: 1.5rem;
+}
+
+.book-sub-section p{
+  font-size: 1rem;
+}
+
+.book-sub-section h2{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-size: 20px;
+}
+
+.contact-section h3{
+  padding: 5px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.contact-text{
+  padding-bottom: 1rem;
+}
+
+.services-text{
+  padding-top: 2rem;
+}
+
+.locationBtn-section{
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+}
+
+.location-button{
+  background-color: var(--main-backgroundColor2);
+  padding: 10px 15px;
+  font-family: 'Amatic SC', cursive; 
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer{
+  background-color: var(--main-backgroundColor2);
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+
+footer h2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+.link {
+  text-decoration: underline;
+  color: blue;
+}
+
+#photos-section{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 0.1rem;
+}
+
+#photos-section img{
+  width: 100%;
+  object-fit:cover;
+  object-position: center center;
+}
+
+#photos-section img:nth-child(3){
+  object-position: top;
+}
